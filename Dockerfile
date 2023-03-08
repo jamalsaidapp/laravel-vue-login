@@ -1,5 +1,5 @@
 # Use the official PHP image as the base image
-FROM php:8.2-apache
+FROM php:7.4-apache
 
 # Copy the application files into the container
 COPY . /var/www/html
@@ -21,7 +21,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Install Laravel dependencies
 RUN composer install --no-dev
-RUN composer update
 
 # Expose port 80
 EXPOSE 80
