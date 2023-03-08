@@ -5,7 +5,7 @@ FROM php:8.1-apache
 COPY . /var/www/html
 
 # Set the working directory in the container
-WORKDIR /var/www/html/public
+WORKDIR /var/www/html
 
 # Install necessary PHP extensions
 RUN apt-get update && apt-get install -y \
